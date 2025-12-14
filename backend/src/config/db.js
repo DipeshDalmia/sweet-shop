@@ -1,13 +1,15 @@
-const mongoose=require("mongoose")
+const mongoose = require("mongoose");
 
-const connectDB=async ()=>{
-    try{
-        await mongoose.connect("mongodb://127.0.0.1:27017/sweet-shop")
-        console.log("mongodb connected")
-    }
-    catch(error){
-        console.log(error.message)
-        process.exit(1)
-    }
-}
-module.exports=connectDB
+const connectDB = async () => {
+  try {
+    const mongoURI = process.env.MONGODB_URI;
+    
+    await mongoose.connect(mongoURI);
+    console.log("MongoDB Atlas connected successfully");
+  } catch (error) {
+    console.log("MongoDB connection error:", error.message);
+    process.exit(1);
+  }
+};
+
+module.exports = connectDB;
