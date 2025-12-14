@@ -74,13 +74,11 @@ A full-stack e-commerce application for managing and purchasing sweets, built wi
 
 4. **Create `.env` file in backend directory:**
    ```env
-   MONGODB_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/sweet-shop?retryWrites=true&w=majority
-   TEST_MONGODB_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/sweet-shop-test?retryWrites=true&w=majority
-   PORT=5000
-   JWT_SECRET=supersecretkey
+   MONGODB_URI=your_mongo_db URL
+   PORT=Your port N0.
+   JWT_SECRET=test_secret_key
    ```
    
-   Replace `username`, `password`, and `cluster0.xxxxx.mongodb.net` with your actual MongoDB Atlas credentials.
 
 5. **Start the server:**
    ```bash
@@ -135,44 +133,16 @@ A full-stack e-commerce application for managing and purchasing sweets, built wi
    - Choose "User" or "Admin" role
    - Login and start using the app
 
-## 🔌 API Endpoints
 
-### Authentication
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - Login user
 
-### Sweets (Protected - requires authentication)
-- `POST /api/sweets` - Add new sweet
-- `GET /api/sweets` - Get all sweets
-- `GET /api/sweets/search` - Search sweets (query params: name, category, minPrice, maxPrice)
-- `PUT /api/sweets/:id` - Update sweet
-- `DELETE /api/sweets/:id` - Delete sweet (Admin only)
-- `POST /api/sweets/:id/purchase` - Purchase sweet
-- `POST /api/sweets/:id/restock` - Restock sweet (Admin only)
 
-### Example Request
-
-**Register:**
-```json
-POST /api/auth/register
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "password123",
-  "role": "user"
-}
-```
-
-**Login Response:**
-```json
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "role": "user"
-}
-```
 
 ## 🧪 Testing
-
+ **Add more env's in `.env` file in backend directory:**
+   ```env
+   NODE_ENV=test
+   JWT_SECRET=test_secret_key
+   ```
 Run tests from the backend directory:
 
 ```bash
@@ -214,9 +184,7 @@ I used **ChatGPT** and **Cursor AI** during the development of this project.
 - UI/UX design and styling was done by me
 - Project structure and architecture decisions were made by me
 
-### Reflection
 
-AI tools (ChatGPT and Cursor AI) were helpful specifically for generating comprehensive test suites, which saved time on writing repetitive test code. However, all the core application logic, features, and implementation were developed independently. The AI assistance was limited to testing, allowing me to focus on building the actual application functionality while ensuring good test coverage.
 
 ## 📝 License
 
