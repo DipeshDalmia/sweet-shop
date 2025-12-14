@@ -1,5 +1,7 @@
 # 🍭 Sweet Shop - E-Commerce Application
 
+Live Deployment:https://sweet-shop-green.vercel.app/
+
 A full-stack e-commerce application for managing and purchasing sweets, built with React and Node.js. Features user authentication, role-based access control, inventory management, and a modern responsive UI.
 <img width="1896" height="903" alt="image" src="https://github.com/user-attachments/assets/ee79ec78-059e-4f15-b67b-70859c602804" />
 <img width="1888" height="893" alt="image" src="https://github.com/user-attachments/assets/a3dc1ce2-7aa5-4353-bf6c-7e04ac9a25f3" />
