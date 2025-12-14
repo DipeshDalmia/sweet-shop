@@ -19,7 +19,6 @@ const Login = () => {
 
     try {
       const res = await api.post("/auth/login", { email, password });
-        console.log("Backend response:", res.data);
       login(res.data.token, res.data.role);
       navigate("/");
     } catch (err) {
